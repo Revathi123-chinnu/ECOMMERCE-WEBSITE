@@ -1,6 +1,6 @@
 # Shopping Cart Website
 
-This project is a **Shopping Cart Website** developed using **Spring Boot**. The application provides an online shopping experience with essential features such as product browsing, cart management, and order placement.
+This project is a **Shopping Cart Website** developed using **Spring Boot**. The application provides an online shopping experience with essential features such as product browsing, cart management, and order placement. 
 
 ## Features
 
