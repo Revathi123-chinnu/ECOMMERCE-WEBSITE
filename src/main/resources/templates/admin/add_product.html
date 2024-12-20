@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: Layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        /* Flexbox styles for centering */
+        body, html {
+            height: 100%; /* Full height */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use Flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: #f8f9fa; /* Optional background color */
+        }
+        .container {
+            width: 100%; /* Full width */
+            max-width: 400px; /* Smaller maximum width for a cute form */
+            padding: 20px; /* Adjust padding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a cute effect */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #ffffff; /* White background for contrast */
+        }
+        form {
+            height: auto; /* Auto height to fit content */
+            width: 100%; /* Full width of container */
+        }
+        .form-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body class="form-center">
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="card-header">
+                            <p class="fs-4 text-center">Add Product</p>
+                        </div>
+                        <div class="card-body">
+                            <!-- Display Flash Messages -->
+                            <div th:if="${succMsg}" class="alert alert-success" role="alert">
+                                <p th:text="${succMsg}"></p>
+                            </div>
+                            <div th:if="${errorMsg}" class="alert alert-danger" role="alert">
+                                <p th:text="${errorMsg}"></p>
+                            </div>
+
+                            <form action="/admin/saveProduct" method="post" enctype="multipart/form-data" class="form-center">
+                                <div class="mb-3">
+                                    <label for="productTitle" class="form-label">Product Title</label>
+                                    <input required class="form-control" id="productTitle" name="title" type="text">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productDescription" class="form-label">Product Description</label>
+                                    <textarea required class="form-control" id="productDescription" name="description" rows="2"></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productCategory" class="form-label">Category</label>
+                                    <select required class="form-control" id="productCategory" name="category">
+                                        <option value="">-- Select Category --</option>
+                                        <option>Wedding wear</option>
+                                        <option>Party wear</option>
+                                        <option>sarees</option>
+                                        <option>Jewellary</option>
+                                        <option>Watches</option>
+                                       
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productPrice" class="form-label">Product Price</label>
+                                    <input required class="form-control" id="productPrice" name="price" type="number" step="0.01">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Status</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" checked value="true" name="isActive" id="activeStatus">
+                                        <label class="form-check-label" for="activeStatus">Active</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="isActive" value="false" id="inactiveStatus">
+                                        <label class="form-check-label" for="inactiveStatus">Inactive</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productStock" class="form-label">Product Stock</label>
+                                    <input required class="form-control" id="productStock" name="stock" type="number">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="productImage" class="form-label">Upload Image</label>
+                                    <input required class="form-control" id="productImage" name="file" type="file" accept="image/*">
+                                </div>
+
+                                <button type="submit" class="btn bg-primary text-white col-md-12">Add Product</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="/admin/products" class="text-decoration-none">View Products</a><br>
+                            <a href="/admin" class="text-decoration-none">Back to Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

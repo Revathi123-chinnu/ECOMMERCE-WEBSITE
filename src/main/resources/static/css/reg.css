@@ -1,0 +1,20 @@
+/* Background Section Styling */
+.background-section {
+    background-image: url('../img/bg1.jpeg'); /* Adjust the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+Additional Styling for Better Visuals
+.container {
+    max-width: 900px;
+    background: rgba(223, 105, 105, 0.9); /* Slightly transparent background for contrast */
+    border-radius: 10px;
+    box-shadow: 10px 4px 10px rgba(3, 3, 3, 0.25);
+}

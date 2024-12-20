@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: Layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Website</title>
+    <style>
+        .category-section {
+            background-color: #f9f9f9;
+        }
+        .latest-products-section {
+            background-color: #e0f7fa;
+        }
+        .category-section img, .latest-products-section img {
+            width: 100%; /* Make all images take up the full width of their container */
+            height: 140px; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Ensures images maintain aspect ratio and cover the set height */
+        }
+    </style>
+    
+</head>
+<body>
+     <link rel="stylesheet" href="/css/custom.css">
+    <section> 
+       
+        <!-- Start slider -->
+
+        <div id="carouselExample" class="carousel slide" >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/main.jpeg" class="d-block mx-auto" style="width: 1100px; height: 577px;" />
+
+                </div>
+                <div class="carousel-item">
+                    <img src="img/m111.jpg" class="d-block mx-auto" style="width: 1100px; height: 697px;" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/mainn.jpeg" class="d-block mx-auto" style="width: 1100px; height: 577px;" />
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- End slider -->
+
+        <!-- Start Occasions Module -->
+<div class="container category-section" style="background-color: #f5f7f8fa; padding: 20px; border-radius: 10px;">
+    <div class="row">
+        <p class="text-center fs-4">Occasions</p>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <!-- Image Section -->
+                <div style="background-image: url('img/makeupkit.avif'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <!-- Text Section -->
+                <div class="card-body text-center">
+                    <p class="text-dark">Wedding</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/party.jpeg'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Party</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/saree.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 140px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Formal events</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/fest.jpg'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Festivals</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/casual.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 140px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Casual Outings</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/office.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Office Wear</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<!-- End Occasions Module -->
+
+     <!-- start clothing type -->
+
+     <!-- start clothing type -->
+<div class="container category-section" style="background-color: #f5f7f8fa; padding: 20px; border-radius: 10px;">
+    <div class="row">
+        <p class="text-center fs-4">Clothing Type</p>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/dress.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Dresses</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/suits.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 140px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Suits and Blazers</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/traditional.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 140px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Traditional Wear</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/casualwear.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Casual Wear</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/active.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Active Wear</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                <div style="background-image: url('img/saree.webp'); 
+                            background-size: cover; 
+                            background-position: center; 
+                            height: 160px; 
+                            border-radius: 8px;">
+                </div>
+                <div class="card-body text-center">
+                    <p class="text-dark">Sarees</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end clothing type -->
+
+
+
+
+
+    <!--Accesories -->
+    <div class="container category-section" style="background-color: #f5f7f8fa; padding: 20px; border-radius: 10px;">
+        <div class="row">
+            <p class="text-center fs-4">Accessories</p>
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/jw.jpeg'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 140px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Jewellary</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/san.jpeg'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 140px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Footwear</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/bag.webp'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 140px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Bags </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/wat.jpeg'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 140px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Watches</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/sunglass.jpeg'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 140px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Sunglasses</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                    <div style="background-image: url('img/main4.jpeg'); 
+                                background-size: cover; 
+                                background-position: center; 
+                                height: 120px; 
+                                border-radius: 8px;">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="text-dark">Formal Sandals</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <!-- new Arrivals -->
+
+        <div class="container category-section" style="background-color: #f5f7f8fa; padding: 20px; border-radius: 10px;">
+            <div class="row">
+                <p class="text-center fs-4">Popular Trends</p>
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <!-- Image Section -->
+                        <div style="background-image: url('img/n.jpeg'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 140px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <!-- Text Section -->
+                        <div class="card-body text-center">
+                            <p class="text-dark">Festive Collection</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div style="background-image: url('img/nu.jpeg'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 160px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-dark">New Arrivals</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div style="background-image: url('img/b.jpeg'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 160px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-dark">Best Sellers</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div style="background-image: url('img/c.jpeg'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 140px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-dark">Celebrity Inspired</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div style="background-image: url('img/n1.webp'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 140px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-dark">Sustainable Fashion</p>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="col-md-2">
+                    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div style="background-image: url('img/seas.jpeg'); 
+                                    background-size: cover; 
+                                    background-position: center; 
+                                    height: 140px; 
+                                    border-radius: 8px;">
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="text-dark">Seasonal specials</p>
+                        </div>
+                    </div>
+                </div>
+        
+                
+            </div>
+        </div>
+     
+
+           
+        </div>
+    </div>
+
+        
+      
+    </section>
+</body>
+</html>

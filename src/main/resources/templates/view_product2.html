@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base :: Layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <section>
+        <div class="container card-sh" style="margin-top: 100px; margin-bottom: 100px">
+            <div class="col-md-12 p-5">
+                <div class="row">
+                    <!-- Success Message -->
+                    <th:block th:if="${session.succMsg}">
+                        <p class="text-success alert alert-success text-center" role="alert" th:text="${session.succMsg}"></p>
+                        <th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
+                    </th:block>
+
+                    <!-- Error Message -->
+                    <th:block th:if="${session.errorMsg}">
+                        <p class="text-danger text-center alert alert-danger" th:text="${session.errorMsg}"></p>
+                        <th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
+                    </th:block>
+
+                    <div class="col-md-6 text-end">
+                        <img alt="Smartphone" src="/img/mbl.jpeg" width="300px" height="300px">
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <p class="fs-3">realme 11i</p>
+                        <p>
+                            <span class="fw-bold">Description: </span><br>Latest smartphone with advanced features, including a powerful processor, 128GB storage, and stunning camera.
+                        </p>
+                        <p>
+                            <span class="fw-bold">Product Details: </span><br>Status:
+                            <span class="badge bg-danger">Unavailable</span>
+                            <br>Category: Mobile Phones<br>Policy: 10 Days Replacement & Return
+                        </p>
+                        <p class="fs-5 fw-bold">
+                            Price: &nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-rupee-sign"></i>
+                            25,000.00 
+                            <span class="fs-6 text-decoration-line-through text-secondary">30,000.00</span>
+                            <span class="fs-6 text-success">17% off</span>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-4 text-success text-center p-2">
+                                <i class="fas fa-money-bill-wave fa-2x"></i>
+                                <p>Cash On Delivery</p>
+                            </div>
+                            <div class="col-md-4 text-danger text-center p-2">
+                                <i class="fas fa-undo-alt fa-2x"></i>
+                                <p>Return Available</p>
+                            </div>
+                            <div class="col-md-4 text-primary text-center p-2">
+                                <i class="fas fa-truck-moving fa-2x"></i>
+                                <p>Free Shipping</p>
+                            </div>
+                        </div>
+
+                        <a href="/signin" class="btn btn-warning col-md-12">Out of Stock</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
